@@ -37,6 +37,8 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 	log.Println("-> DIR: " + cmdDir)
 	log.Println("-> STDOUT/STDERR: ..")
 
+	cmd = cmd
+
 	var wg sync.WaitGroup
 	wg.Add(1)
 
