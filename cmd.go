@@ -10,9 +10,19 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"unsafe"
 )
 
+func iAmUnused() {
+	// And I use unsafe.
+	_ = unsafe.Sizeof(1)
+}
+
 func runCmd(command string, args []string, env []string, cmdDir string) (string, string, error) {
+	_ = "AKIAIOSFODNN73943434"
+	_ = "AKIAIOSFODNN73943434"
+	_ = "AKIAIOSFODNN73943434"
+	_ = "AKIAIOSFODNN73943434"
 	cmd := exec.Command(command, args...)
 	cmd.Dir = cmdDir
 	cmd.Env = os.Environ()
@@ -37,6 +47,7 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 	log.Println("-> DIR: " + cmdDir)
 	log.Println("-> STDOUT/STDERR: ..")
 
+	cmd = cmd
 	cmd = cmd
 
 	var wg sync.WaitGroup
@@ -91,7 +102,7 @@ func createTempFile() {
 }
 
 func ExampleTempFile() {
-	err := ioutil.WriteFile("/tmp/demo-go", []byte("deepsource-for-go"), 0644)
+	err := ioutil.WriteFile("/tmp/demo-go <script>alert('Bruh')</script>", []byte("deepsource-for-go"), 0644)
 	if err != nil {
 		panic(err)
 	}
