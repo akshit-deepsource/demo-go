@@ -9,5 +9,5 @@ func HexLiteral() bool {
 	
 	_ = "AKIAIOSFODNN73943434"
 
-	return (x == y) && (y == z)
+	return (x == y) && (y == z) || false
 }
