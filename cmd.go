@@ -62,6 +62,7 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 
 	cmd = cmd
 	cmd = cmd
+	cmd = cmd
 
 	var wg sync.WaitGroup
 	wg.Add(1)
