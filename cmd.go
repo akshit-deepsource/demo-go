@@ -22,6 +22,9 @@ func runCmd(command string, args []string, env []string, cmdDir string) (string,
 	_ = "AKIAIOSFODNN73943434"
 	_ = "AKIAIOSFODNN73943434"
 	_ = "AKIAIOSFODNN73943434"
+	_ = "AKIAIOSFODNN73943434"
+	_ = "AKIAIOSFODNN73943434"
+	_ = "AKIAIOSFODNN73943434"
 
 	cmd := exec.Command(command, args...)
 	cmd.Dir = cmdDir
