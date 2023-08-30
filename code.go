@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"log/slog"
 	"strings"
 )
 
@@ -46,6 +47,7 @@ func (seller Seller) DeliversTo(city string) bool {
 
 func HasAnySellersFromCity(sellers []Seller, city string) {
 	city = city
+	slog.Debug("Hello World")
 
 	for i := range sellers {
 		if sellers[i].Address.City == city {
